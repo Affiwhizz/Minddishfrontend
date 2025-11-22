@@ -1,0 +1,147 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Quattrocento:wght@400;700&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+@theme {
+  /* Color System */
+  --color-charcoal: #272F31;
+  --color-grey: #475569;
+  --color-green: #014325;
+  --color-yellow: #FFB40B;
+  --color-orange: #F64D00;
+  --color-cream: #FDE4CE;
+  
+  /* Shadows */
+  --shadow-soft: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --shadow-medium: 0 4px 16px rgba(0, 0, 0, 0.08);
+  --shadow-large: 0 8px 32px rgba(0, 0, 0, 0.12);
+  --shadow-glow-green: 0 0 24px rgba(1, 67, 37, 0.15);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-white text-grey antialiased;
+    font-family: 'Quicksand', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: 400;
+  }
+
+  h1 {
+    @apply text-charcoal;
+    font-family: 'Quattrocento', serif;
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+  }
+
+  h2 {
+    @apply text-charcoal;
+    font-family: 'Quattrocento', serif;
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.005em;
+  }
+
+  h3 {
+    @apply text-charcoal;
+    font-family: 'Quattrocento', serif;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: 0.01em;
+  }
+
+  h4 {
+    @apply text-charcoal;
+    font-family: 'Quattrocento', serif;
+    font-size: clamp(1.25rem, 2vw, 1.5rem);
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: 0.01em;
+  }
+
+  p {
+    font-family: 'Quicksand', sans-serif;
+    font-size: clamp(1rem, 1.5vw, 1.125rem);
+    line-height: 1.7;
+    font-weight: 400;
+  }
+  
+  button, .button {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+  }
+}
+
+@layer utilities {
+  .text-charcoal {
+    color: var(--color-charcoal);
+  }
+  
+  .text-grey {
+    color: var(--color-grey);
+  }
+  
+  .text-green {
+    color: var(--color-green);
+  }
+  
+  .text-yellow {
+    color: var(--color-yellow);
+  }
+  
+  .text-orange {
+    color: var(--color-orange);
+  }
+  
+  .bg-charcoal {
+    background-color: var(--color-charcoal);
+  }
+  
+  .bg-green {
+    background-color: var(--color-green);
+  }
+  
+  .bg-yellow {
+    background-color: var(--color-yellow);
+  }
+  
+  .bg-orange {
+    background-color: var(--color-orange);
+  }
+  
+  .bg-cream {
+    background-color: var(--color-cream);
+  }
+  
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .bg-gradient-radial {
+    background: radial-gradient(circle, var(--tw-gradient-stops));
+  }
+  
+  /* Analyze Recipe Button Hover Effect */
+  .analyze-button {
+    background-color: #E5E7EB;
+    color: #272F31;
+    transition: all 0.3s ease;
+  }
+  
+  .analyze-button:hover {
+    background-color: #F64D00;
+    color: #FFFFFF;
+  }
+}
